@@ -35,35 +35,6 @@ void	print_stack(t_stack *stack, t_stack *stack_b);
 void	sort_three(t_stack **stack_a);
 
 
-void	print_stack(t_stack *stack_a, t_stack *stack_b)
-{
-	t_stack	*a;
-	t_stack *b;
-
-	a = stack_a;
-	b = stack_b;
-	printf("stack_a		stack_b\n\n");
-	while (a || b)
-	{
-		if (!a)
-		{
-			printf("<   -  >	<   %d  >\n", b -> val);
-			b = b -> next;
-		}
-		else if (!b)
-		{
-			printf("<    %d  >	<   -  >\n", a -> val);
-			a = a -> next;
-		}
-		else if(a && b)
-		{
-			printf("<   %d  >	<   %d  >\n", a -> val, b -> val);
-			a = a -> next;
-			b = b -> next;
-		}
-	}
-	printf("----------------------------------\n\n");
-}
 
 
 
